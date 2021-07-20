@@ -15,7 +15,27 @@ module.exports = {
         port: 3000,
         contentBase: path.resolve(__dirname, 'build')
 
+    },
+    /* Los módulos son para albegar en conjunto cierta funcionalidad de la aplicación, en el mismo lugar. */
+    /* El "$" significa el final de la línea. */
+    /* El "use : [...] es para escribir los cargadores de librerías en específico". */
+    module: {
+
+        rules: [
+
+            {
+
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+
+            }
+
+        ]
+
+
     }
+
 
 
 
