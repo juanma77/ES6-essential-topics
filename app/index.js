@@ -151,4 +151,89 @@ const printJuanWithArrowFunction = () => {
 
 printJuanWithArrowFunction();
 
+/* Función "map".
+La función "map" aplica precisamnete otra función a cada elemento de un vector y regresa un vector nuevo con esos cambios (Con los elementos nuevos). */
+
+let points = [ 10, 20, 30 ];
+
+/*let addOne = function ( element ) {
+
+    return element + 1; 
+
+
+}*/
+
+/*
+let addOne = ( element ) => {
+
+    return element + 1;
+
+}*/
+
+/* 
+points = points.map( addOne );
+
+console.log( points ); */
+
+points = points.map( ( element ) =>  {
+
+    return element + 1;
+
+});
+
+let lengths = [ 3, 7, 5 ];
+let multiple = 8;
+
+const scale = ( element ) => {
+
+  return element * multiple; 
+
+}
+
+lengths = lengths.map( scale );
+console.log( lengths );
+
+/* 
+const mm = function ( multiplicador ) {
+
+    return lengths.map(multiplicador);
+
+} */ 
+
+/* Función "filter".
+Regresa un nuevo vector con los elementos que cumplen la condición dada en el filtro. 
+*/
+
+/* let isPassing = ( grade ) => {
+
+    return grade >= 70;
+
+} */ 
+
+/* let scores = [ 90, 65, 30, 87, 53 ];
+
+let passing = scores.filter( ( element ) => {
+
+    element >= 70;
+
+});
+
+console.log( passing ); */ 
+
+let scores = [ 90, 65, 30, 87, 53 ];
+
+let passing = scores.filter( ( element ) => 
+
+    element >= 70
+
+);
+
+console.log( passing );
   
+/* Más métodos implementados en ES6:
+
+1.- Find(), que regresa un valor en un vector que pasa una prueba dada.
+2.- ForEach(), similar a map(), que llama a una función para cade elemento del vector.
+3.- Reduce(), some(), keys(), values(), etc.
+*/
+
