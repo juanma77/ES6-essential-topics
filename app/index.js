@@ -201,7 +201,7 @@ const mm = function ( multiplicador ) {
 } */ 
 
 /* Función "filter".
-Regresa un nuevo vector con los elementos que cumplen la condición dada en el filtro. 
+Crea y regresa un nuevo vector con los elementos que cumplen la condición dada en el filtro. 
 */
 
 /* let isPassing = ( grade ) => {
@@ -221,7 +221,6 @@ let passing = scores.filter( ( element ) => {
 console.log( passing ); */ 
 
 let scores = [ 90, 65, 30, 87, 53 ];
-
 let passing = scores.filter( ( element ) => 
 
     element >= 70
@@ -229,7 +228,20 @@ let passing = scores.filter( ( element ) =>
 );
 
 console.log( passing );
-  
+
+const averages = [ 6, 15.7, 9, 18, 22.1, 9.2, 4 ];
+const highlight = () => {
+
+  return averages.filter( ( element ) => 
+
+    element >= 15
+
+  )
+
+};
+
+console.log( ' Vector con jugadores que tienen más de 15 puntos ', highlight() );
+
 /* Más métodos implementados en ES6:
 
 1.- Find(), que regresa un valor en un vector que pasa una prueba dada.
@@ -237,3 +249,19 @@ console.log( passing );
 3.- Reduce(), some(), keys(), values(), etc.
 */
 
+const add = ( valueOne, valueTwo ) => {
+
+    return valueOne + valueTwo; 
+
+}
+
+const multiply = () => {
+
+    return valueOne * valueTwo; 
+
+
+}
+
+export default add; 
+
+export { multiply }; 
