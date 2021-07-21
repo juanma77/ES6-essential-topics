@@ -262,6 +262,28 @@ const multiply = () => {
 
 }
 
-export default add; 
+// Uso de "export"
+// export default add; 
 
-export { multiply }; 
+// export { multiply }; 
+
+class Entity {
+
+    constructor( name, height ) {
+
+        this.name = name;
+        this.height = height; 
+
+    }
+
+    greet() {
+
+        console.log( `Hello, I'm ${ this.name } from Middle Earth!` );
+
+
+    }
+
+}
+
+let merry = new Entity( "Merry", 4.8 ); 
+merry.greet();

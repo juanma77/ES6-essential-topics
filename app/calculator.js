@@ -1,3 +1,3 @@
-import add from './index'; 
+// import add from './index'; 
 
-import { multiply } from './index';
+// import { multiply } from './index';
