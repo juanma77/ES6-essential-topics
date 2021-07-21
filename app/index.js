@@ -38,7 +38,7 @@ let resultado = `El resultado es: ${primero} ${segundo}`;
 console.log( resultado );
 
 // Ejemplo del uso del operador "spread".
-// Se usa para separar cada elemento de un vector o arreglo e insertar cada dicho elemento en un nuevo lugar.
+// Se usa para separar cada elemento de un vector u objeto e insertar cada dicho elemento en un nuevo lugar (En múltiples variables).
 let mi_vector = [ 3, 4, 5 ];
 
 let mi_segundo_vector = [ 1, 2, ...mi_vector, 6 ];
@@ -74,6 +74,46 @@ function butter( ...myarr ) {
 }
 
 butter (4, 5, 6 );
-
 console.log( butter() );
+
+// Ejemplo del uso del operador de desestructuración en vectores.
+// Se usa para extraer datos de vectores u objetos en variables separadas. 
+let f = [ 100, 200 ];
+
+let [ g, h ] = f;
+
+console.log( g, h );
+
+let fellowship = [ "Frodo", "Gandalf", "Aragorn" ];
+
+let [ hobbit, wizard, ranger ] = fellowship;
+
+console.log( hobbit, wizard, ranger );
+
+let u = [ 100, 200, 300, 400, 500 ];
+
+let [ t, ...v ] = u;
+
+console.log( t, v );
+
+// Ejemplo del uso del operador de desestructuración en objetos.
+
+let mago = { magical: true, power: 10 };
+
+let { magical, power } = mago; 
+
+console.log( magical, power );
+
+// Se puede usar esta forma de desestructuración debido a que así no estamos reasignando un cierto valor al bloque de código. 
+let magia = false;
+let poder = 9;
+
+let strider = { magia: false, poder: 9 };
+
+( { magia, poder } = strider );
+
+console.log( magia, poder );
+
+
+
   
