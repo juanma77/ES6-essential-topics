@@ -267,6 +267,7 @@ const multiply = () => {
 
 // export { multiply }; 
 
+// Clases 
 class Entity {
 
     constructor( name, height ) {
@@ -287,3 +288,42 @@ class Entity {
 
 let merry = new Entity( "Merry", 4.8 ); 
 merry.greet();
+
+class Hobbit extends Entity {
+
+    constructor( name, height ) {
+
+        super( name, height ); 
+
+    }
+
+    greet() {
+
+        console.log(`Hello, I'm ${ this.name } from The Shire!`);
+
+    }
+
+}
+
+let frodo = new Hobbit( "Frodo Baggins", 5.4 );
+frodo.greet();
+
+class Wizard {
+    constructor(power_level) {
+      
+        this.power_level = power_level; 
+
+    }
+  
+    // TODO add power(), such that it returns this class's power_level
+    power() {
+
+        return this.power_level;
+
+    }
+  
+  
+  }
+  
+  let Gandalf = new Wizard(100);
+  
