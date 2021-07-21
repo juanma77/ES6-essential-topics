@@ -114,6 +114,41 @@ let strider = { magia: false, poder: 9 };
 
 console.log( magia, poder );
 
+// Funciones flecha
 
+setTimeout( () => {
+
+    console.log( 'Hola a todos desde una función flecha' );
+
+}, 1000 );
+
+const blastoff = () => {
+
+    console.log( ' 3...2...1... Blastoff! ' );
+
+}
+
+blastoff();
+
+this.juan = 25; 
+
+/* Aquí se imprime primero el valor de 50 que se muestra en la función normal de JavaScript, luego se imprime el valor de 25 que se muestra en la función flecha.
+Esto debido a que la función flecha no hace un enlace de su objeto this como las funciones normales de JavaScript. */
+let printJuan = function () {
+
+    this.juan = 50; 
+    console.log(' This.juan with normal JavaScript function', this.juan );
+
+}
+
+printJuan();
+
+const printJuanWithArrowFunction = () => {
+
+    console.log( ' This.juan with arrow function ', this.juan );
+
+}
+
+printJuanWithArrowFunction();
 
   
